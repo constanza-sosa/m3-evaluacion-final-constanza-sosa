@@ -36,7 +36,7 @@ const CharacterDetail = props => {
 } else {
   return (
     <React.Fragment>
-      <p>El personaje solicitado no existe</p>
+      <p>El personaje solicitado no existeeeeee</p>
       <Link to="/" className="app__back">Volver al listado de personajes</Link>
     </React.Fragment>
   );
