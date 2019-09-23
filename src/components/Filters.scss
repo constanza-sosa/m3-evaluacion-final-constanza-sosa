@@ -5,14 +5,25 @@
   margin: 15px;
   box-sizing: border-box;
 }
+.search-bar-name{
+  display: flex;
+  align-items: center;
+  height: 25px;
+}
 
 .search-bar-specie{
   display: flex;
   align-items: center;
-  height: 20px;
+  height: 25px;
 }
 
 .search-title{
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.search-title-specie{
   margin: 5px;
   color: white;
 }
@@ -25,12 +36,15 @@
 
 .search-label-checkbox{
   color: white;
+  margin: 0 5px ;
+  vertical-align: bottom;
 }
 
 .search-input{
-  margin: 5px;
+  margin: 0 5px;
   border: 1px solid #9FCD4A;
   height: 20px;
+  padding: 0;
   &::placeholder{
     vertical-align: middle;
   }

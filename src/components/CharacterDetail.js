@@ -4,23 +4,15 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const CharacterDetail = props => {
-  const { characters, routerProps, loading } = props;
+
+  const { characters, routerProps, } = props;
   const ramId = parseInt(routerProps.match.params.ramId);
   
-  if (loading) {
-    return(
-      <div>
-        <p className="white">La información se está cargando</p>
-        <Link to="/" className="app__back"> Volver al listado de personajes </Link>
-      </div>
-    );
-  }
-
   if (ramId > characters.length) {
     return (
       <div>
-        <p className="char-det-load">La información se está cargando!</p>
-        <Link to="/" className="app__back"> Volver al listado de personajes </Link>
+        <p className="message">The information is loading</p>
+        <Link to="/" className="app__back"> Back to results </Link>
       </div>
     );
   }
@@ -43,15 +35,15 @@ const CharacterDetail = props => {
                 <p className="char-det__episodes">Episodes: {episode.length}</p>
               </div>
             </div>
-            <Link to="/" className="app__back">{`< Volver`}</Link>
+            <Link to="/" className="app__back">{`< Back`}</Link>
           </div>
         </div>
       );
 } else {
   return (
     <React.Fragment>
-      <p>El personaje solicitado no existeeeeee</p>
-      <Link to="/" className="app__back">Volver al listado de personajes</Link>
+      <p className="message">Im sorry, but this character doesn't exists!</p>
+      <Link to="/" className="app__back">Back to results</Link>
     </React.Fragment>
   );
 }

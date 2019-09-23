@@ -12,7 +12,6 @@ const Home = props => {
         getName={getName}
         query={query}
         getSpecie={getSpecie}
-        querySpecie = {querySpecie}
       />
 
       <CharacterList
@@ -27,7 +26,10 @@ const Home = props => {
 Home.propTypes = {
   getName: PropTypes.func.isRequired,
   query: PropTypes.string.isRequired,
-  characters: PropTypes.arrayOf(PropTypes.object).isRequired
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getSpecie: PropTypes.func.isRequired,
+  querySpecie: PropTypes.array.isRequired
+
 };
 
 export default Home;
