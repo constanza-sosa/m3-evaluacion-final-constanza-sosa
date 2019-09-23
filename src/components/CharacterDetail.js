@@ -29,8 +29,8 @@ const CharacterDetail = props => {
               </div>
               <div className="char-det__info">
                 <h2 className="char-det__name">Name: {name}</h2>
-                <p className="char-det__status">Status: {status}</p>
-                <p className="char-det__species">Specie: {species}</p>
+                <p className={`char-det__status ${status === 'Alive' ? 'alive' : ''} ${status === 'unknown' ? 'unknown' : ''} ${status === 'Dead' ? 'dead' : ''}`}>Status: {status}</p>
+                <p className={`char-det__species ${species === 'Human' ? 'human' : 'alien'}`}>Specie: {species}</p>
                 <p className="char-det__origin">Origin: {origin.name}</p>
                 <p className="char-det__episodes">Episodes: {episode.length}</p>
               </div>

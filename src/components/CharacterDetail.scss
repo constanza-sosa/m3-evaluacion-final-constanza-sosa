@@ -78,3 +78,53 @@
   color: white;
   font-size: 24px;
 }
+
+.dead{
+  &::after{
+    content: "\f54c";
+    font-size: 16px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 600;
+    margin: 0 10px;
+  }
+}
+
+.alive{
+  &::after{
+    content: "\f4fc";
+    font-size: 16px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 600;
+    margin: 0 10px;
+  }
+}
+
+.unknown{
+  &::after{
+    content: "\f128";
+    font-size: 16px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 600;
+    margin: 0 10px;
+  }
+}
+
+.alien{
+  &::after{
+    content: "\f544";
+    font-size: 16px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 600;
+    margin: 0 10px;
+  }
+}
+
+.human{
+  &::after{
+    content: "\f29a";
+    font-size: 16px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 700;
+    margin: 0 10px;
+  }
+}
