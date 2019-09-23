@@ -5,8 +5,7 @@ const CharacterCard = props => {
   const { character } = props;
   const { image, name, species } = character;
 
-  return (
-    
+  return ( 
         <div className="character-detail">
           <img className="character-item" src={image} alt={name}></img>
           <h2 className="character-name">Name: {name}</h2>
@@ -17,7 +16,7 @@ const CharacterCard = props => {
 };
 
 CharacterCard.propTypes = {
-  character: PropTypes.arrayOf(PropTypes.object).isRequired,
+  character: PropTypes.object.isRequired,
 };
 
 export default CharacterCard;

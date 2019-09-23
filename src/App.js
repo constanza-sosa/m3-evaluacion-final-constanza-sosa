@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.scss';
 import { fetchCharacters } from './services/fetchCharacters'
 import Header from './components/Header';
 import Home from './components/Home'
 import CharaterDetail from './components/CharacterDetail';
+import Footer from './components/Footer';
 import { Switch, Route } from 'react-router-dom';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
       this.state = {
@@ -44,25 +45,28 @@ class App extends React.Component {
       <div className="app">
         <Header />
 
-        <Switch>
-          <Route exact path="/" render={ () => {
-            return (
-              <Home 
-                getName = {this.getName}
-                characters = {characters}
-                query = {query}
-              />
-            );
-          }} />
-          <Route path="/character-detail/:ramId" render={ routerProps => {
+        <main className="app-main">
+          <Switch>
+            <Route exact path="/" render={ () => {
               return (
-                <CharaterDetail 
-                  routerProps={routerProps}
+                <Home 
+                  getName = {this.getName}
                   characters = {characters}
+                  query = {query}
                 />
               );
             }} />
-        </Switch> 
+            <Route path="/character-detail/:ramId" render={ routerProps => {
+                return (
+                  <CharaterDetail 
+                    routerProps={routerProps}
+                    characters = {characters}
+                  />
+                );
+              }} />
+          </Switch> 
+        </main>
+        <Footer />
       </div>
     );
   }
