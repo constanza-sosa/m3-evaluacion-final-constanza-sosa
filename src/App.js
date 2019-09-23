@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 import { fetchCharacters } from './services/fetchCharacters'
+import Home from './components/Home'
+import Header from './components/Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -38,31 +40,13 @@ class App extends React.Component {
 
     return (
       <div className="app">
-        <header className="app-header">
-          <h1 className="header-title">Rick and Morty</h1>
-          <img src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png" alt="Rick and Morty" className="header-title--img"></img>
-        </header>
-        <main>
-          <label className="search-label">Busca tu personaje favorito</label>
-          <input type="text" className="search-input" onChange={this.getName}></input>
-          <div className="results">
-            <ol className="character-list">
-              {characters
-              .filter(character => character.name.toUpperCase().includes(query.toUpperCase()))
-              .map (character => {
-                return (
-                <li className="character-item" key={character.id}>
-                <div className="character-detail">
-                  <img className="character-item" src={character.image} alt={character.name}></img>
-                  <p className="character-name">Name:{character.name}</p>
-                  <p className="character-specie">Specie:{character.species}</p>
-                </div>
-              </li>
-              )})
-              }
-            </ol>
-          </div>
-        </main>
+        <Header />
+
+        <Home 
+        getName = {this.getName}
+        characters = {characters}
+        query = {query}
+        />
 
       </div>
     );
