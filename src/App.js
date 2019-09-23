@@ -10,7 +10,7 @@ class App extends React.Component {
         query: ''
       };
   
-    this.getCharacters = this.getCharacters.bind(this)
+    this.getName = this.getName.bind(this)
   }
 
   componentDidMount(){
@@ -26,9 +26,15 @@ class App extends React.Component {
       });
   }
 
+  getName(event) {
+    const query = event.currentTarget.value;
+      this.setState({
+        query: query
+      });
+    }
 
   render() {
-    const { characters } = this.state;
+    const { characters, query } = this.state;
 
     return (
       <div className="app">
@@ -38,10 +44,11 @@ class App extends React.Component {
         </header>
         <main>
           <label className="search-label">Busca tu personaje favorito</label>
-          <input type="text" className="search-input"></input>
+          <input type="text" className="search-input" onChange={this.getName}></input>
           <div className="results">
             <ol className="character-list">
               {characters
+              .filter(character => character.name.toUpperCase().includes(query.toUpperCase()))
               .map (character => {
                 return (
                 <li className="character-item" key={character.id}>
