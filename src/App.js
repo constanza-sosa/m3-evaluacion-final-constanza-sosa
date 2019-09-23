@@ -29,7 +29,6 @@ class App extends Component {
       .then(data => {
         this.setState({
           characters: data.results,
-          loading: false,
         });
       });
   }
@@ -57,7 +56,6 @@ class App extends Component {
   }
   render() {
     const { characters , query , querySpecie } = this.state;
-    console.log(this.state)
 
     return (
       <div className="app">
