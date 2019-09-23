@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.scss';
 import { fetchCharacters } from './services/fetchCharacters'
-import Home from './components/Home'
 import Header from './components/Header';
+import Home from './components/Home'
+import CharaterDetail from './components/CharacterDetail';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -42,12 +44,25 @@ class App extends React.Component {
       <div className="app">
         <Header />
 
-        <Home 
-        getName = {this.getName}
-        characters = {characters}
-        query = {query}
-        />
-
+        <Switch>
+          <Route exact path="/" render={ () => {
+            return (
+              <Home 
+                getName = {this.getName}
+                characters = {characters}
+                query = {query}
+              />
+            );
+          }} />
+          <Route path="/character-detail/:ramId" render={ routerProps => {
+              return (
+                <CharaterDetail 
+                  routerProps={routerProps}
+                  characters = {characters}
+                />
+              );
+            }} />
+        </Switch> 
       </div>
     );
   }
