@@ -7,14 +7,14 @@ const CharacterDetail = props => {
   const { characters, routerProps, loading } = props;
   const ramId = parseInt(routerProps.match.params.ramId);
   
-  // if (loading) {
-  //   return(
-  //     <div>
-  //       <p className="white">La información se está cargando</p>
-  //       <Link to="/" className="app__back"> Volver al listado de personajes </Link>
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return(
+      <div>
+        <p className="white">La información se está cargando</p>
+        <Link to="/" className="app__back"> Volver al listado de personajes </Link>
+      </div>
+    );
+  }
 
   if (ramId > characters.length) {
     return (

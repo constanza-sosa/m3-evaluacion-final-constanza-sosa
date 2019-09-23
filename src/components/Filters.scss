@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+.search-bar-specie{
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
 .search-title{
   margin: 5px;
   color: white;
@@ -15,6 +21,10 @@
   margin: 5px;
   color: white;
   height: 20px;
+}
+
+.search-label-checkbox{
+  color: white;
 }
 
 .search-input{

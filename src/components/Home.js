@@ -4,18 +4,21 @@ import CharacterList from './CharacterList';
 import PropTypes from 'prop-types';
 
 const Home = props => {
-  const {getName, characters, query} = props;
+  const { getName , characters , query , getSpecie , querySpecie } = props;
 
   return (
     <Fragment>
       <Filters 
         getName={getName}
         query={query}
+        getSpecie={getSpecie}
+        querySpecie = {querySpecie}
       />
 
       <CharacterList
         characters={characters}
         query={query}
+        querySpecie = {querySpecie}
       />
     </Fragment>
   );

@@ -13,10 +13,12 @@ class App extends Component {
       this.state = {
         characters: [],
         query: '',
+        querySpecie: '',
         loading: true,
       };
   
     this.getName = this.getName.bind(this)
+    this.getSpecie = this.getSpecie.bind(this)
   }
 
   componentDidMount(){
@@ -39,9 +41,17 @@ class App extends Component {
         query: query
       });
     }
+  
+  getSpecie(event) {
+    const querySpecie = event.currentTarget.value;
+      this.setState({
+        querySpecie: querySpecie
+      });
+    }
 
   render() {
-    const { characters, loading, query } = this.state;
+    const { characters , loading, query , querySpecie } = this.state;
+    console.log(this.state)
 
     return (
       <div className="app">
@@ -55,6 +65,8 @@ class App extends Component {
                   getName = {this.getName}
                   characters = {characters}
                   query = {query}
+                  querySpecie = {querySpecie}
+                  getSpecie = {this.getSpecie}
                 />
               );
             }} />
@@ -63,7 +75,7 @@ class App extends Component {
                   <CharaterDetail 
                     routerProps={routerProps}
                     characters = {characters}
-                    leading = {loading}
+                    loading = {loading}
                   />
                 );
               }} />
