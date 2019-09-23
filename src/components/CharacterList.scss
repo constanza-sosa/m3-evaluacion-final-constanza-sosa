@@ -1,16 +1,23 @@
+.results{
+  box-sizing: border-box;
+  margin: 15px;
+}
+
 .character-list{
+  width: 100%;
   list-style: none;
-  margin: 0;
+  margin: 15px auto;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-row-gap: 10px;
   grid-column-gap: 10px;
-  text-align: center;
-
 }
 
 .character-item{
   padding: 0 auto;
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 10px;
 
 }

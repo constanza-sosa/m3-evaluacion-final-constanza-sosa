@@ -1,9 +1,21 @@
 .app-footer{
-  flex-grow: auto;
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 80px;
   background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+  @media all and (min-width: 768px){
+    height: 100px;
+  }
+}
+
+.footer-copy{
+  margin: 5px;
+}
+
+.footer-title{
+  margin: 5px;
 }

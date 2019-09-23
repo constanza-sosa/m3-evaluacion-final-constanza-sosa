@@ -1,15 +1,21 @@
 .app-header{
-  flex-grow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-title {
   background-image: url('./../assets/images/LogoRM.png');
   background-repeat: no-repeat;
-  width: 400px;
+  width: 280px;
   background-size: contain;
   background-position: center;
-  padding-top: 201px;
+  padding-top: 100px;
   height: 1px;
   overflow: hidden;
-  margin:0;
+  margin-top: 10px;
+  @media all and (min-width: 768px){
+    width: 400px;
+  }
+
 }

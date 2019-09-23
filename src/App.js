@@ -12,7 +12,8 @@ class App extends Component {
     super(props);
       this.state = {
         characters: [],
-        query: ''
+        query: '',
+        loading: true,
       };
   
     this.getName = this.getName.bind(this)
@@ -26,7 +27,8 @@ class App extends Component {
     fetchCharacters()
       .then(data => {
         this.setState({
-          characters: data.results
+          characters: data.results,
+          loading: false,
         });
       });
   }
@@ -39,7 +41,7 @@ class App extends Component {
     }
 
   render() {
-    const { characters, query } = this.state;
+    const { characters, loading, query } = this.state;
 
     return (
       <div className="app">
@@ -61,6 +63,7 @@ class App extends Component {
                   <CharaterDetail 
                     routerProps={routerProps}
                     characters = {characters}
+                    leading = {loading}
                   />
                 );
               }} />

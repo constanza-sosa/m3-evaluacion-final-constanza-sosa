@@ -9,7 +9,7 @@ const CharacterCard = props => {
 
   return ( 
     <div className="character-detail">
-      <img className="character-item" src={image} alt={name}></img>
+      <img className="character-img" src={image} alt={name}></img>
       <h2 className="character-name">Name: {name}</h2>
       <p className="character-specie">Specie: {species}</p>
     </div>
