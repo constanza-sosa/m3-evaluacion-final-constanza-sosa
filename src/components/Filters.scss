@@ -1,15 +1,27 @@
 .search-bar{
-  background-color: white;
-  height: 50px;
-  border: 2px solid #18AFC8;
-  padding: 15px;
+  background-color: #18AFC8;
+  border: 2px solid #9FCD4A;
+  padding: 10px;
   margin: 15px;
+  box-sizing: border-box;
+}
+
+.search-title{
+  margin: 5px;
+  color: white;
 }
 
 .search-label{
-  margin: 10px;
+  margin: 5px;
+  color: white;
+  height: 20px;
 }
 
 .search-input{
-  margin: 10px
+  margin: 5px;
+  border: 1px solid #9FCD4A;
+  height: 20px;
+  &::placeholder{
+    vertical-align: middle;
+  }
 }

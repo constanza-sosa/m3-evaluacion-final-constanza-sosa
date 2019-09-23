@@ -1,3 +1,23 @@
+.character-detail{
+  display: flex;
+  flex-direction: column;
+}
+
 .character-img{
   width: 100%;
+  align-self: flex-start;
+}
+
+.character-name{
+  font-size: 18px;
+  flex-grow: 1;
+  margin: 10px;
+  @media all and (min-width: 350px){
+    min-height: 85px;
+  }
+}
+
+.character-specie{
+  color: white;
+  margin:5px;
 }
