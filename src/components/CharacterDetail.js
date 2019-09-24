@@ -7,16 +7,13 @@ const CharacterDetail = props => {
 
   const { characters, routerProps, } = props;
   const ramId = parseInt(routerProps.match.params.ramId);
-
-
-
   
   if (ramId > characters.length) {
     return (
-      <div>
-        <p className="message">The information is loading</p>
-        <Link to="/" className="app__back"> Back to results </Link>
-      </div>
+      <React.Fragment>
+        <p className="message">Im sorry, but this character doesn't exists!</p>
+        <Link to="/" className="app__back"> {`< Back to results`} </Link>
+      </React.Fragment>
     );
   }
 
@@ -46,7 +43,7 @@ const CharacterDetail = props => {
   return (
     <React.Fragment>
       <p className="message">Im sorry, but this character doesn't exists!</p>
-      <Link to="/" className="app__back">Back to results</Link>
+      <Link to="/" className="app__back">{`< Back to results`}</Link>
     </React.Fragment>
   );
 }
