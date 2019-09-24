@@ -3,7 +3,13 @@ import './Filters.scss';
 import PropTypes from 'prop-types';
 
 const Filters = props => {
-  const { getName , query , getSpecie, getEpisodes } = props;
+  const { 
+    getName,
+    query,
+    getSpecie, 
+    getEpisodes,
+    getGender, 
+    queryGender } = props;
 
   return (
     <div className="search-bar">
@@ -31,6 +37,64 @@ const Filters = props => {
             <option value="more than 1, but less than 15">More than 1, but less than 15</option>
             <option value="more than 15">More than 15</option>
         </select>
+      </div>
+      <div className="search-bar-gender"> By gender:
+        <div>
+          <label htmlFor="genderFemale">
+            <input
+              id="genderFemale"
+              type="radio"
+              value="Female"
+              name="genderFemale"
+              className="input-gender"
+              checked = {queryGender === 'Female'}
+              onChange = { getGender }
+            />
+            Female
+          </label>
+        </div>
+        <div>
+          <label htmlFor="genderMale">
+            <input
+              id="genderMale"
+              type="radio"
+              value="Male"
+              name="genderMale"
+              className="input-gender"
+              checked = {queryGender === 'Male'}
+              onChange = { getGender }
+            />
+            Male
+          </label>
+        </div>
+        <div>
+          <label htmlFor="genderunknown">
+            <input
+              id="genderunknown"
+              type="radio"
+              value="unknown"
+              name="genderunknown"
+              className="input-gender"
+              checked = {queryGender === 'unknown'}
+              onChange = { getGender }
+            />
+            unknown
+          </label>
+        </div>
+        <div>
+          <label htmlFor="genderAll">
+            <input
+              id="genderAll"
+              type="radio"
+              value="all"
+              name="genderAll"
+              className="input-gender"
+              checked = {queryGender === 'all'}
+              onChange = { getGender }
+            />
+            all
+          </label>
+        </div>
       </div>
     </div>
   );

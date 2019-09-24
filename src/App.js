@@ -14,12 +14,14 @@ class App extends Component {
         characters: [],
         query:'',
         querySpecie: [],
-        queryEpisode: ''
+        queryEpisode: '',
+        queryGender: 'all'
       };
   
     this.getName = this.getName.bind(this)
     this.getSpecie = this.getSpecie.bind(this)
     this.getEpisodes = this.getEpisodes.bind(this)
+    this.getGender = this.getGender.bind(this)
   }
 
   componentDidMount(){
@@ -61,8 +63,18 @@ class App extends Component {
     const query = event.currentTarget.value;
       this.setState({ queryEpisode: query });
   }
+
+  getGender(event) {
+    const query = event.currentTarget.value;
+      this.setState({ queryGender: query });
+    }
   render() {
-    const { characters , query , querySpecie , queryEpisode } = this.state;
+    const { 
+      characters, 
+      query, 
+      querySpecie, 
+      queryEpisode, 
+      queryGender } = this.state;
 
     return (
       <div className="app">
@@ -80,6 +92,8 @@ class App extends Component {
                   getSpecie = {this.getSpecie}
                   queryEpisode = {queryEpisode}
                   getEpisodes = {this.getEpisodes}
+                  queryGender = {queryGender}
+                  getGender = {this.getGender}
                 />
               );
             }} />

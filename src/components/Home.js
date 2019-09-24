@@ -4,7 +4,16 @@ import CharacterList from './CharacterList';
 import PropTypes from 'prop-types';
 
 const Home = props => {
-  const { getName , characters , query , getSpecie , querySpecie , queryEpisode , getEpisodes } = props;
+  const { 
+    getName,
+    characters,
+    query,
+    getSpecie, 
+    querySpecie, 
+    queryEpisode, 
+    getEpisodes, 
+    queryGender, 
+    getGender } = props;
 
   return (
     <Fragment>
@@ -13,6 +22,8 @@ const Home = props => {
         query = {query}
         getSpecie = {getSpecie}
         getEpisodes = {getEpisodes}
+        getGender = {getGender}
+        queryGender = {queryGender}
       />
 
       <CharacterList
@@ -20,6 +31,7 @@ const Home = props => {
         query = {query}
         querySpecie = {querySpecie}
         queryEpisode = {queryEpisode}
+        queryGender = {queryGender}
       />
     </Fragment>
   );
@@ -32,7 +44,9 @@ Home.propTypes = {
   getSpecie: PropTypes.func.isRequired,
   querySpecie: PropTypes.array.isRequired,
   getEpisodes: PropTypes.func.isRequired,
-  queryEpisode: PropTypes.string.isRequired
+  queryEpisode: PropTypes.string.isRequired,
+  getGender: PropTypes.func.isRequired,
+  queryGender: PropTypes.string.isRequired,
 };
 
 export default Home;

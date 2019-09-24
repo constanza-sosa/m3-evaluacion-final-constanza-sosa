@@ -5,7 +5,12 @@ import CharacterCard from './CharacterCard';
 import { Link } from 'react-router-dom';
 
 const CharacterList = props => {
-  const { characters , query , querySpecie , queryEpisode } = props;
+  const { 
+    characters,
+    query,
+    querySpecie,
+    queryEpisode,
+    queryGender } = props;
 
   return (
     <div className="results">
@@ -38,6 +43,16 @@ const CharacterList = props => {
             character.species.includes(querySpecie)
             );
           }
+        })
+
+        .filter(character => {
+          if (queryGender === '' || queryGender === 'all') {
+            return true;
+          } else {
+              return (
+                queryGender === character.gender
+              );
+          } 
         })
         .map (character => {
           return (
