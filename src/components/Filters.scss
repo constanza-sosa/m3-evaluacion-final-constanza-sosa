@@ -53,8 +53,9 @@
 
 .search-bar-episodes{
   color: white;
-  height: 25px;
+  min-height: 25px;
   vertical-align: middle;
+  margin:5px 0;
 }
 
 .search-title-episodes{
@@ -73,9 +74,10 @@
 .search-bar-gender{
   margin: 0 5px;
   color: white;
-  height: 25px;
+  min-height: 25px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .input-gender{
