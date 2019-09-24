@@ -59,6 +59,7 @@ CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   query: PropTypes.string.isRequired,
   querySpecie: PropTypes.arrayOf(PropTypes.string).isRequired,
+  queryEpisode: PropTypes.string.isRequired
 };
 
 export default CharacterList;

@@ -13,7 +13,6 @@ const Home = props => {
         query = {query}
         getSpecie = {getSpecie}
         getEpisodes = {getEpisodes}
-        queryEpisode = {queryEpisode}
       />
 
       <CharacterList
@@ -31,8 +30,9 @@ Home.propTypes = {
   query: PropTypes.string.isRequired,
   characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   getSpecie: PropTypes.func.isRequired,
-  querySpecie: PropTypes.array.isRequired
-
+  querySpecie: PropTypes.array.isRequired,
+  getEpisodes: PropTypes.func.isRequired,
+  queryEpisode: PropTypes.string.isRequired
 };
 
 export default Home;

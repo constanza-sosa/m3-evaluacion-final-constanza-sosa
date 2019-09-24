@@ -40,6 +40,7 @@ Filters.propTypes = {
   getName: PropTypes.func.isRequired,
   query: PropTypes.string.isRequired,
   getSpecie: PropTypes.func.isRequired,
+  getEpisodes: PropTypes.func.isRequired,
 };
 
 export default Filters;
