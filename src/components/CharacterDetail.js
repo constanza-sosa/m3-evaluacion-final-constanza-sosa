@@ -7,6 +7,9 @@ const CharacterDetail = props => {
 
   const { characters, routerProps, } = props;
   const ramId = parseInt(routerProps.match.params.ramId);
+
+
+
   
   if (ramId > characters.length) {
     return (
@@ -29,8 +32,8 @@ const CharacterDetail = props => {
               </div>
               <div className="char-det__info">
                 <h2 className="char-det__name">Name: {name}</h2>
-                <p className={`char-det__status ${status === 'Alive' ? 'alive' : ''} ${status === 'unknown' ? 'unknown' : ''} ${status === 'Dead' ? 'dead' : ''}`}>Status: {status}</p>
-                <p className={`char-det__species ${species === 'Human' ? 'human' : 'alien'}`}>Specie: {species}</p>
+                <p className= {`char-det__status ${status.toLowerCase()}`}>Status: {status}</p>
+                <p className={`char-det__species ${species.toLowerCase()}`}>Specie: {species}</p>
                 <p className="char-det__origin">Origin: {origin.name}</p>
                 <p className="char-det__episodes">Episodes: {episode.length}</p>
               </div>
