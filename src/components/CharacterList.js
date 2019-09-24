@@ -35,6 +35,7 @@ const CharacterList = props => {
             );
           }
         })
+
         .filter(character => {
           if (querySpecie === '' || querySpecie.length > 1) {
             return true;
@@ -54,6 +55,7 @@ const CharacterList = props => {
               );
           } 
         })
+
         .map (character => {
           return (
             <li className="character-item" key={character.id}>
@@ -74,7 +76,8 @@ CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   query: PropTypes.string.isRequired,
   querySpecie: PropTypes.arrayOf(PropTypes.string).isRequired,
-  queryEpisode: PropTypes.string.isRequired
+  queryEpisode: PropTypes.string.isRequired,
+  queryGender: PropTypes.string.isRequired
 };
 
 export default CharacterList;

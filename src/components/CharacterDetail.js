@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 
 const CharacterDetail = props => {
 
-  const { characters, routerProps, } = props;
+  const { 
+    characters, 
+    routerProps, } = props;
   const ramId = parseInt(routerProps.match.params.ramId);
   
   if (ramId > characters.length) {
@@ -18,10 +20,18 @@ const CharacterDetail = props => {
   }
 
   const character = characters.filter(item => item.id === ramId);
+
   if (character[0]) {
-    const {name, image, status, species, origin, episode} = character[0];
+    const {
+      name, 
+      image, 
+      status, 
+      species, 
+      origin, 
+      episode} = character[0];
+
       return (
-      <div className="detail__container">
+        <div className="detail__container">
           <div className="detail">
             <div className="char-det">
               <div className="char-det__img">

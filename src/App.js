@@ -40,7 +40,8 @@ class App extends Component {
   getName(event) {
     const query = event.currentTarget.value;
       this.setState({ query: query });
-    }
+  }
+  
   getSpecie(event) {
     const query = event.currentTarget.value;
     this.setState(prevState => {
