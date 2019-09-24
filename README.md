@@ -1,8 +1,21 @@
 # Ricky and Morty Directory 
 
---> This is my final evaluation of the third and last module of @Adalab's Bootcamp. 
+This is my final evaluation of the third and last module of @Adalab's Bootcamp. 
 
---> It was made with React, CSS Grid and Sass; following a mobile-first approach.
+It was made with React (Using components, Proptypes and Router), CSS Grid and Sass; following a mobile-first approach.
+
+### Mobile:
+
+<img src="./src/assets/images/screenshots/mobile.png" alt="Mobile view" height="400px">
+
+### Ipad: 
+
+<img src="./src/assets/images/screenshots/ipad.png" alt="Ipad view" height="400px">
+
+### Web:
+
+<img src="./src/assets/images/screenshots/web.png" alt="Web view" height="400px">
+
 
 -----------------------------------------------------------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
