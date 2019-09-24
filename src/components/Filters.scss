@@ -53,10 +53,19 @@
 
 .search-bar-episodes{
   color: white;
+  height: 25px;
+  vertical-align: middle;
 }
 
 .search-title-episodes{
   margin: 5px;
   color: white;
   height: 20px;
+}
+
+.select{
+  height: 20px;
+  border: 1px solid #9FCD4A;
+  font-family: 'Neucha', cursive;
+  vertical-align: bottom;
 }

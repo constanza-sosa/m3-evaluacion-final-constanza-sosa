@@ -25,7 +25,7 @@ const Filters = props => {
       </div>
       <div className="search-bar-episodes">
         <label htmlFor="episode" className="search-title-episodes">By number of episodes:</label>
-          <select id="episode" name="episode" onChange={getEpisodes}>
+          <select id="episode" name="episode" onChange={getEpisodes} className="select">
             <option value="">Select an option:</option>
             <option value="just 1 episode" >Just 1 episode</option>
             <option value="more than 1, but less than 15">More than 1, but less than 15</option>
