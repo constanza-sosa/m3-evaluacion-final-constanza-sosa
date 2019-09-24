@@ -14,10 +14,12 @@ class App extends Component {
         characters: [],
         query:'',
         querySpecie: [],
+        queryEpisode: ''
       };
   
     this.getName = this.getName.bind(this)
     this.getSpecie = this.getSpecie.bind(this)
+    this.getEpisodes = this.getEpisodes.bind(this)
   }
 
   componentDidMount(){
@@ -54,8 +56,13 @@ class App extends Component {
       }
     });
   }
+
+  getEpisodes(event){
+    const query = event.currentTarget.value;
+      this.setState({ queryEpisode: query });
+  }
   render() {
-    const { characters , query , querySpecie } = this.state;
+    const { characters , query , querySpecie , queryEpisode } = this.state;
 
     return (
       <div className="app">
@@ -71,6 +78,8 @@ class App extends Component {
                   querySpecie = {querySpecie}
                   getName = {this.getName}
                   getSpecie = {this.getSpecie}
+                  queryEpisode = {queryEpisode}
+                  getEpisodes = {this.getEpisodes}
                 />
               );
             }} />

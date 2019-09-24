@@ -3,7 +3,7 @@ import './Filters.scss';
 import PropTypes from 'prop-types';
 
 const Filters = props => {
-  const { getName , query , getSpecie } = props;
+  const { getName , query , getSpecie, getEpisodes } = props;
 
   return (
     <div className="search-bar">
@@ -22,6 +22,15 @@ const Filters = props => {
         Alien
           <input id="inputAlien" type="checkbox" className="search-input-cb" value="Alien" onChange={getSpecie}></input>
         </label>
+      </div>
+      <div className="search-bar-episodes">
+        <label htmlFor="episode" className="search-title-episodes">By number of episodes:</label>
+          <select id="episode" name="episode" onChange={getEpisodes}>
+            <option value="">Select an option:</option>
+            <option value="just 1 episode" >Just 1 episode</option>
+            <option value="more than 1, but less than 15">More than 1, but less than 15</option>
+            <option value="more than 15">More than 15</option>
+        </select>
       </div>
     </div>
   );
